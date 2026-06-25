@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+         <meta charset="UTF-8">
+         <title>SMSY-Gen02 | Award Winning Creative Graphics Engineer</title>
+
+         <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+         
+         <meta name="description" content="SMSY-Gen02 - Award winning Creative Graphics Engineer specializing in WebGPU, WebGL, three.js, and interactive 3D experiences.">
+         <meta name="author" content="SMSY">
+         <meta name="keywords" content="portfolio, creative, design, projects, Gen02, WebGPU, WebGL, three.js, 3D, interactive, developer">
+
+         <meta property="og:title" content="SMSY-Gen02 | Award Winning Creative Graphics Engineer">
+         <meta property="og:description" content="Award winning Creative Graphics Engineer specializing in WebGPU, WebGL, three.js, and interactive 3D experiences.">
+         <meta property="og:image" content="./assets/textures/faces8.png">
+         <meta property="og:image:type" content="image/png">
+         <meta property="og:image:width" content="1200">
+         <meta property="og:image:height" content="628">
+         <meta property="og:image:alt" content="SMSY-Gen02 - Creative Graphics Engineer Portfolio">
+         <meta property="og:url" content="http://localhost:3001">
+         <meta property="og:type" content="website">
+         <meta property="og:site_name" content="SMSY-Gen02">
+         <meta property="og:locale" content="en_US">
+
+         <meta name="twitter:card" content="summary_large_image">
+         <meta name="twitter:title" content="SMSY-Gen02 | Award Winning Creative Graphics Engineer">
+         <meta name="twitter:description" content="Award winning Creative Graphics Engineer specializing in WebGPU, WebGL, three.js, and interactive 3D experiences.">
+         <meta name="twitter:image" content="./assets/textures/faces8.png">
+         <meta name="twitter:image:alt" content="SMSY-Gen02 - Creative Graphics Engineer Portfolio">
+         <meta name="twitter:creator" content="@samsyyyy">
+         <meta name="twitter:site" content="@samsyyyy">
+
+         <meta name="theme-color" content="#000000">
+         <meta name="msapplication-TileColor" content="#000000">
+         <meta name="apple-mobile-web-app-capable" content="yes">
+         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+         <link rel="canonical" href="http://localhost:3001">
+
+         <link rel="icon" type="image/x-icon" href="./favicons/favicon.ico">
+         <link rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16x16.png">
+         <link rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png">
+         <link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png">
+         <link rel="icon" type="image/png" sizes="192x192" href="./favicons/android-chrome-192x192.png">
+         <link rel="icon" type="image/png" sizes="512x512" href="./favicons/android-chrome-512x512.png">
+
+        <link rel="stylesheet" href="https://use.typekit.net/twe8lcf.css">
+
+        <!-- Preload critical assets -->
+        <link rel="preload" href="./assets/js/main-ITpbzWAg.js" as="script">
+        <link rel="preload" href="./assets/css/main-rb3R8F1q.css" as="style">
+
+        <script>
+        // ====================================================
+        // 本地运行适配补丁
+        // ====================================================
+
+        // 1) Bypass tutorial - mark tutorial as completed
+        try {
+          var q = JSON.parse(localStorage.getItem('smsy_quests'));
+          if (!q) q = {};
+          q.TUTORIAL = true;
+          localStorage.setItem('smsy_quests', JSON.stringify(q));
+        } catch(e) {}
+
+        // 2) Inject required query params (preserve any already present):
+        //    - forceWebGL=true : skip WebGPU (may fail on some browsers)
+        //    - cdn=false       : load videos from local /videos/ instead of remote CDN (403)
+        (function() {
+          var p = new URLSearchParams(window.location.search);
+          var changed = false;
+          if (p.get('forceWebGL') !== 'true') { p.set('forceWebGL', 'true'); changed = true; }
+          if (p.get('cdn') === null)          { p.set('cdn', 'false');        changed = true; }
+          if (changed) {
+            var qs = p.toString();
+            window.location.replace(window.location.pathname + (qs ? '?' + qs : ''));
+          }
+        })();
+        </script>
+
+     <script type="module" crossorigin src="./assets/js/main-ITpbzWAg.js"></script>
+     <link rel="stylesheet" crossorigin href="./assets/css/main-rb3R8F1q.css">
+   </head>
+
+    <body>
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-T6R7J0D4NK"></script>
+      <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-T6R7J0D4NK');
+      </script>
+
+       <div id="preloader" style="position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;background:#000;color:#f03;font-family:forma-djr-display,sans-serif;font-size:14px;text-transform:uppercase;letter-spacing:2px;">
+         LOADING...
+       </div>
+
+       <div id="app"></div>
+
+    </body>
+</html>
