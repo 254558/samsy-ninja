@@ -1,7 +1,9 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "cleanUrls": true,
-  "trailingSlash": false,
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "dest": "/index.html" }
+  ],
   "headers": [
     {
       "source": "/(.*)",
@@ -12,16 +14,16 @@
       ]
     },
     {
-      "source": "/(.*)\\.(glb|vrm)",
-      "headers": [
-        { "key": "Content-Type", "value": "model/gltf-binary" }
-      ]
+      "source": "/(.*)\\.glb",
+      "headers": [{ "key": "Content-Type", "value": "model/gltf-binary" }]
+    },
+    {
+      "source": "/(.*)\\.vrm",
+      "headers": [{ "key": "Content-Type", "value": "model/gltf-binary" }]
     },
     {
       "source": "/lib/(.*)\\.wasm",
-      "headers": [
-        { "key": "Content-Type", "value": "application/wasm" }
-      ]
+      "headers": [{ "key": "Content-Type", "value": "application/wasm" }]
     }
   ]
 }
